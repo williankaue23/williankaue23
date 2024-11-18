@@ -13,12 +13,10 @@ async function quantidadeDeUsuariosPorRede () {
           y: quantidadeDeUsuarios,
           type: 'bar',
           marker: {
-            color: getComputedStyle(document.body).getPropertyValue('--primary-color')
-          }
+            color: getCSS('--primary-color')
         }
-    ]
-      
-    // código omitido
+    }
+]
 
 const layout = {
     plot_bgcolor: getCSS('--bg-color'),
@@ -31,27 +29,26 @@ const layout = {
            family: getCSS('--font'),
            size: 30
        }
-    // código omitido
-
-  },
-  xaxis: {
-      title: {
-          text: 'nome das redes sociais',
-          font: {
-              color: getCSS('--secondary-color')
-          }
-      }
-  },
-  yaxis: {
-          text: 'bilhões de usuários ativos',
-          font: {
-              color: getCSS('--secondary-color')
-          }
-      }
-  }
+    },
+    xaxis: {
+        icktfont: tickConfig,
+        title: {
+            text: 'nome das redes sociais',
+            font: {
+                color: getCSS('--secondary-color')
+            }
+        }
+    },
+    yaxis: {
+        icktfont: tickConfig,
+        title: {
+            text: 'bilhões de usuários ativos',
+            font: {
+                color: getCSS('--secondary-color')
+            }
+        }
+    }
 }
-
-// código omitido
 
     const grafico = document.createElement('div')
     grafico.className = 'grafico'
@@ -60,3 +57,24 @@ const layout = {
     
 }
 quantidadeUsuarios()
+},
+xaxis: {
+    tickfont: tickConfig,
+  },
+  xaxis: {
+      tickfont: tickConfig,
+      title: {
+          text: 'nome das redes sociais',
+          font: {
+              color: getCSS('--secondary-color')
+          }
+      }
+  },
+
+
+        text: 'nome das redes sociais',
+        font: {
+            color: getCSS('--secondary-color')
+        }
+    }
+},
